@@ -1,0 +1,30 @@
+UPDATE employee_table 
+  SET 
+	firstname = CASE 
+	WHEN id = 5 THEN 'Nancy' 
+	WHEN id = 6 THEN 'Molly' 
+	ELSE firstname 
+  END, 
+	lastname = CASE 
+	WHEN id =5 THEN 'Anderson' 
+	WHEN id = 6 THEN 'Dempsey' 
+	ELSE lastname 
+  END, 
+  	title = CASE 
+  	WHEN id = 5 THEN 'Sales Rep' 
+  	WHEN id = 6 THEN 'Gardener' 
+  	ELSE title 
+  END, hiredate = CASE 
+  	WHEN id = 5 THEN 'May 1, 2010' 
+  	WHEN id = 6 THEN 'October 17, 2009' 
+  	ELSE hiredate 
+  END;
+------------------------------------------------------------------------------
+
+ UPDATE employee_table 
+   SET id = CASE 
+   	WHEN id = 5 THEN 6 
+   	WHEN id = 6 THEN 5 
+   	ELSE id 
+   END;
+
