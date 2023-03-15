@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 15, 2023 at 10:22 AM
+-- Generation Time: Mar 15, 2023 at 12:57 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -44,9 +44,9 @@ INSERT INTO `employee_table` (`id`, `firstname`, `lastname`, `title`, `hiredate`
 (2, 'Kim', 'Akers', 'Head Buyers', 'June 1, 2008'),
 (3, 'Tom', 'O\'Neill', 'Assistant', 'November 2, 2008'),
 (7, 'Michael', 'Entin', 'Sales Rep', 'April 1, 2011'),
-(6, 'Nancy', 'Anderson', 'Sales Rep', 'May 1, 2010'),
+(4, 'Naoki', 'Sato', 'Sales Manager', 'August 14,2009'),
 (5, 'Molly', 'Dempsey', 'Gardener', 'October 17, 2009'),
-(4, 'Naoki', 'Sato', 'Sales Manager', 'August 14, 2009'),
+(6, 'Nancy', 'Anderson', 'Sales Rep', 'May 1, 2010'),
 (8, 'Kari', 'Furse', 'Buyer', 'May 3, 2011'),
 (9, 'Chase', 'Carpenter', 'Gardener', 'November 15, 2012');
 COMMIT;
