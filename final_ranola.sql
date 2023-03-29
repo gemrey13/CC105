@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2023 at 08:58 AM
+-- Generation Time: Mar 29, 2023 at 08:02 AM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -78,7 +78,7 @@ INSERT INTO `employees` (`employee_id`, `first_name`, `last_name`, `email_addres
 (10011, 'Andrew', 'Gonzalez', 'andrewgonzalez@example.com', '555-5588', '1976-08-12', 'M'),
 (10012, 'Olivia', 'Taylor', 'oliviataylor@example.com', '555-7744', '1983-12-05', 'F'),
 (10013, 'Matthew', 'Harris', 'matthewharris@example.com', '555-6234', '1991-04-29', 'M'),
-(10014, 'Lauren', 'Thomas', 'laurenthomas@example.com', '555-8910', '1987-10-09', 'F'),
+(10014, 'Kanye', 'Thomas', 'kanyethomas@example.com', '555-8910', '1987-10-09', 'M'),
 (10015, 'Christopher', 'White', 'christopherwhite@example.com', '555-6578', '1978-05-03', 'M'),
 (10016, 'Sophia', 'Martin', 'sophiamartin@example.com', '555-9191', '1992-09-24', 'F'),
 (10017, 'Daniel', 'Clark', 'danielclark@example.com', '555-2000', '1981-02-14', 'M'),
@@ -86,9 +86,9 @@ INSERT INTO `employees` (`employee_id`, `first_name`, `last_name`, `email_addres
 (10019, 'William', 'Rodriguez', 'williamrodriguez@example.com', '555-4444', '1977-11-18', 'M'),
 (10020, 'Maria', 'Garcia', 'mariagarcia@example.com', '555-1234', '1980-01-01', 'F'),
 (10021, 'Mark', 'Wilson', 'markwilson@example.com', '555-5678', '1985-05-05', 'M'),
-(10022, 'Linda', 'Davis', 'lindadavis@example.com', '555-4321', '1975-12-31', 'F'),
+(10022, 'Peter', 'Davis', 'peterdavis@example.com', '555-4321', '1975-12-31', 'M'),
 (10023, 'Jacob', 'Martinez', 'jacobmartinez@example.com', '555-9876', '1990-06-15', 'M'),
-(10024, 'Elizabeth', 'Anderson', 'elizabethanderson@example.com', '555-2468', '1988-11-22', 'F'),
+(10024, 'Jake', 'Paul', 'jakepaul@example.com', '555-2468', '1988-11-22', 'M'),
 (10025, 'Jonathan', 'Thomas', 'jonathanthomas@example.com', '555-1357', '1984-04-14', 'M');
 
 -- --------------------------------------------------------
@@ -243,6 +243,50 @@ CREATE TABLE `tac_info` (
   `completion_date` date DEFAULT NULL,
   `expiration_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tac_info`
+--
+
+INSERT INTO `tac_info` (`training_id`, `employee_id`, `TAC_name`, `completion_date`, `expiration_date`) VALUES
+(1, 10001, 'Leadership Training', '2022-01-01', '2023-01-01'),
+(2, 10001, 'Sales Training', '2022-02-01', '2023-02-01'),
+(3, 10002, 'Leadership Training', '2022-01-01', '2023-01-01'),
+(4, 10003, 'Marketing Training', '2022-03-01', '2023-03-01'),
+(6, 10004, 'Operations Training', '2022-02-01', '2023-02-01'),
+(7, 10004, 'Leadership Training', '2022-03-01', '2023-03-01'),
+(8, 10005, 'Human Resources Training', '2022-01-01', '2023-01-01'),
+(9, 10006, 'Leadership Training', '2022-04-01', '2023-04-01'),
+(10, 10007, 'Marketing Training', '2022-02-01', '2023-02-01'),
+(11, 10008, 'Sales Training', '2022-01-01', '2023-01-01'),
+(12, 10008, 'Leadership Training', '2022-02-01', '2023-02-01'),
+(13, 10009, 'Operations Training', '2022-03-01', '2023-03-01'),
+(14, 10009, 'Leadership Training', '2022-04-01', '2023-04-01'),
+(15, 10010, 'Leadership Training', '2022-01-01', '2023-01-01'),
+(16, 10010, 'Marketing Training', '2022-02-01', '2023-02-01'),
+(17, 10011, 'Sales Training', '2022-03-01', '2023-03-01'),
+(18, 10011, 'Leadership Training', '2022-04-01', '2023-04-01'),
+(19, 10012, 'Operations Training', '2022-01-01', '2023-01-01'),
+(20, 10012, 'Leadership Training', '2022-02-01', '2023-02-01'),
+(21, 10013, 'Human Resources Training', '2022-03-01', '2023-03-01'),
+(22, 10013, 'Leadership Training', '2022-04-01', '2023-04-01'),
+(23, 10014, 'Sales Training', '2022-01-01', '2023-01-01'),
+(24, 10015, 'Leadership Training', '2022-02-01', '2023-02-01'),
+(25, 10015, 'Marketing Training', '2022-03-01', '2023-03-01'),
+(26, 10016, 'Operations Training', '2022-04-01', '2023-04-01'),
+(27, 10017, 'Human Resources Training', '2022-01-01', '2023-01-01'),
+(29, 10018, 'Marketing Training', '2022-01-01', '2023-01-01'),
+(30, 10021, 'Human Resources Training', '2022-01-01', '2023-01-01'),
+(31, 10021, 'Leadership Training', '2022-02-01', '2023-02-01'),
+(32, 10021, 'Operations Training', '2022-03-01', '2023-03-01'),
+(33, 10022, 'Marketing Training', '2022-04-01', '2023-04-01'),
+(35, 10023, 'Operations Training', '2022-03-01', '2023-03-01'),
+(36, 10024, 'Operations Training', '2022-04-01', '2023-04-01'),
+(37, 10018, 'Leadership Training', '2022-02-01', '2023-02-01'),
+(38, 10019, 'Sales Training', '2022-03-01', '2023-03-01'),
+(39, 10020, 'Leadership Training', '2022-04-01', '2023-04-01'),
+(40, 10020, 'Operations Training', '2022-05-01', '2023-05-01'),
+(41, 10025, 'Sales Training', '2022-03-01', '2023-03-01');
 
 --
 -- Indexes for dumped tables
